@@ -41,7 +41,7 @@ void w1_sendcmd(unsigned char cmd) {
 	for (unsigned char i = 0; i < 8; i++)
 	{
 		if ((cmd & (1 << i)) == 1 << i)
-				{
+		{
 			GPIOA10_Zero();
 			Delay_Us(2);
 			GPIOA10_One();
